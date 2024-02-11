@@ -14,19 +14,34 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/rasm"
             android:layout_width="160dp"
             android:layout_height="200dp"
-            android:layout_marginTop="110dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="110dp"
             android:src="@drawable/rasm" />
 
-        <ImageView
+
+        <TextView
+            android:id="@+id/text"
             android:layout_width="160dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginLeft="20dp"
-            android:src="@drawable/rating"
-            />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:text="Spiderman: No Way
+
+
+            Home"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/rating" />
+
 
     </LinearLayout>
 

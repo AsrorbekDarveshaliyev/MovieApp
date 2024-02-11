@@ -1,5 +1,6 @@
 package com.example.movieapp
 
+import android.os.Build.VERSION_CODES.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
@@ -8,6 +9,7 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        //
+
+
     }
 }
