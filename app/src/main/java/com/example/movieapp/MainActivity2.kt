@@ -1,6 +1,5 @@
 package com.example.movieapp
 
-import android.os.Build.VERSION_CODES.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
