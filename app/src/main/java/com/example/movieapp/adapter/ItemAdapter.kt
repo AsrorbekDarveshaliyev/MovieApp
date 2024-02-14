@@ -9,8 +9,8 @@ import com.example.movieapp.R
 import com.example.movieapp.databinding.MovieBinding
 
 class itemAdapter(private val listener: ((id: Int) -> Unit)) {
-    private var list: ArrayList<MyModel> = ArrayList<MyModel>()
-    fun setList(list: List<MyModel>) {
+    private var list: ArrayList<MymodelUI> = ArrayList<MymodelUI>()
+    fun setList(list: List<MymodelUI>) {
         this.list.clear()
         this.list.addAll(list)
         notifyDataSetChanged()
@@ -36,7 +36,7 @@ class itemAdapter(private val listener: ((id: Int) -> Unit)) {
 
 
     inner class MyViewHolder(val binding: MovieBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun onBind(model: MyModel) {
+        fun onBind(model: MymodelUI) {
             binding.root.setOnClickListener {
 //                itemCardListener?.invoke(model.id)
                 listener.invoke(model.id)
