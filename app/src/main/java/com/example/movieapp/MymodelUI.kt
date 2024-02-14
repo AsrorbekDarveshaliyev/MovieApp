@@ -1,6 +1,6 @@
 package com.example.movieapp
 
-data class MyModel(
+data class MymodelUI(
     val image: Int,
     val name: String,
     val id: Int
