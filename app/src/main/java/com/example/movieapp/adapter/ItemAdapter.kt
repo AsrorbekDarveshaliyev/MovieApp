@@ -1,10 +1,11 @@
-package com.example.movieapp
+package com.example.movieapp.adapter
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.movieapp.MyModel
+import com.example.movieapp.R
 import com.example.movieapp.databinding.MovieBinding
 
 class itemAdapter(private val listener: ((id: Int) -> Unit)) {
