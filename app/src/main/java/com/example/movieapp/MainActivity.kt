@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var film: Any
-
     private lateinit var adapter: itemAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             MymodelUI(R.drawable.shangchi,"The New Amazing Spider-Man", id = 4),
             MymodelUI(R.drawable.shangchi,"Electro", id = 5),
             MymodelUI(R.drawable.shangchi,"Sherlok Holmas", id = 6),
-            MymodelUI(R.drawable.shangchi,"Elona Holmas", id = 7),
+            MymodelUI(R.drawable.shangchi,"Enola Holmas", id = 7),
         )
 
         adapter.setList(toplist)
