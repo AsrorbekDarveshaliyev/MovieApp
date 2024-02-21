@@ -40,17 +40,7 @@ private lateinit var adapter: Adaptermain
 
         adapter.setList(list)
 
-        val toplist = listOf<MymodelUI>(
-            MymodelUI(R.drawable.shangchi,"SHang-Chi", id = 1),
-            MymodelUI(R.drawable.shangchi,"Eternals", id = 2),
-            MymodelUI(R.drawable.shangchi,"Avengers", id = 3),
-            MymodelUI(R.drawable.shangchi,"The New Amazing Spider-Man", id = 4),
-            MymodelUI(R.drawable.shangchi,"Electro", id = 5),
-            MymodelUI(R.drawable.shangchi,"Sherlok Holmas", id = 6),
-            MymodelUI(R.drawable.shangchi,"Elona Holmas", id = 7),
-        )
 
-        adapter.setList(toplist)
 
 //        adapter.setClickListener {
 //            intent.putExtra("myId", it)

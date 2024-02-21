@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.databinding.MovieBinding
+import com.example.movieapp.databinding.MovieVenomBinding
 
-class itemAdapter(private val listener: ((id: Int) -> Unit)) {
+class itemAdapter(private val listener: ((id: Int) -> Unit)):
+    RecyclerView.Adapter<itemAdapter.MyViewHolder>() {
     private var list: ArrayList<MymodelUI> = ArrayList<MymodelUI>()
     fun setList(list: List<MymodelUI>) {
         this.list.clear()
@@ -14,17 +16,6 @@ class itemAdapter(private val listener: ((id: Int) -> Unit)) {
         notifyDataSetChanged()
     }
 
-    private fun notifyDataSetChanged() {
-
-    }
-
-    fun onCreate(savedInstanceState: Bundle?) {
-        setContentView(R.layout.movie)
-    }
-
-    private fun setContentView(movie: Int) {
-
-    }
 
     private var itemCardListener: ((id: Int) -> Unit)? = null
 
@@ -46,7 +37,7 @@ class itemAdapter(private val listener: ((id: Int) -> Unit)) {
         }
     }
 
-    fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(
             MovieBinding.inflate(
                 LayoutInflater.from(parent.context),
@@ -56,11 +47,11 @@ class itemAdapter(private val listener: ((id: Int) -> Unit)) {
         )
     }
 
-    fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.onBind(list[position])
     }
 
-    fun getItemCount(): Int {
+    override fun getItemCount(): Int {
         return list.size
     }
 }
