@@ -15,6 +15,7 @@ class itemAdapter(private val listener: ((id: Int) -> Unit)) :
         notifyDataSetChanged()
     }
 
+
     private fun setContentView(movie: Int) {
 
     }
