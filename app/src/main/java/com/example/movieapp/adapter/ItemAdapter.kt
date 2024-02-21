@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.databinding.MovieBinding
 import com.example.movieapp.databinding.MovieVenomBinding
 
-class itemAdapter(private val listener: ((id: Int) -> Unit)):
+class itemAdapter(private val listener: ((model:MymodelUI) -> Unit)):
     RecyclerView.Adapter<itemAdapter.MyViewHolder>() {
     private var list: ArrayList<MymodelUI> = ArrayList<MymodelUI>()
     fun setList(list: List<MymodelUI>) {
@@ -28,7 +28,7 @@ class itemAdapter(private val listener: ((id: Int) -> Unit)):
         fun onBind(model: MymodelUI) {
             binding.root.setOnClickListener {
 //                itemCardListener?.invoke(model.id)
-                listener.invoke(model.id)
+                listener.invoke(model)
 //                Toast.makeText(context, model.name, Toast.LENGTH_SHORT).show()
             }
             binding.rasm.setImageResource(model.image)

@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.movieapp.MymodelUI
 import com.example.movieapp.R
 import com.example.movieapp.databinding.FragmentHomeBinding
@@ -21,7 +21,7 @@ class HomeFragment : Fragment() {
     ): View {
         binding = FragmentHomeBinding.inflate(layoutInflater)
         adapter = itemAdapter {
-            Toast.makeText(requireContext(), "clicked", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.detailFragment)
         }
         //hello
         binding.horizontalRv.adapter = adapter
