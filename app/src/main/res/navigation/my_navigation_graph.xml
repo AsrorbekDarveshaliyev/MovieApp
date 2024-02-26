@@ -15,4 +15,14 @@
         android:name="com.example.movieapp.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/ticketFragment"
+        android:name="com.example.movieapp.fragment.TicketFragment"
+        android:label="fragment_ticket"
+        tools:layout="@layout/fragment_ticket" />
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.example.movieapp.fragment.SavedFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" />
 </navigation>
