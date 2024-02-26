@@ -56,3 +56,8 @@ class HomeFragment : Fragment() {
 
 
 }
+
+
+fun Number.getSquare(): Double {
+    return Math.pow(this.toDouble(), 4.0)
+}
