@@ -26,10 +26,10 @@ class MainActivity2 : AppCompatActivity() {
 
             if (destination.id == R.id.detailFragment) {
                 //hide
-                binding.bottomNav.visibility=View.GONE
-            }else{
-            //show
-                binding.bottomNav.visibility=View.VISIBLE
+                binding.bottomNav.visibility = View.GONE
+            } else {
+                //show
+                binding.bottomNav.visibility = View.VISIBLE
             }
 
         }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.movieapp.MymodelUI
@@ -20,11 +21,18 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(layoutInflater)
+
+
         adapter = itemAdapter {
             findNavController().navigate(R.id.detailFragment)
         }
         //hello
         binding.horizontalRv.adapter = adapter
+//        binding.horizontalRv.apply {
+//            adapter = adapter
+//            layoutManager = LinearLayoutManager(requireContext())
+//            visibility = View.VISIBLE
+//        }
 
 
         val toplist = listOf<MymodelUI>(
@@ -37,6 +45,11 @@ class HomeFragment : Fragment() {
             MymodelUI(R.drawable.shangchi, "Elona Holmas", id = 7),
         )
 
+        toplist?.let {
+
+        }.run {
+            Toast.makeText(requireContext(), "hatolik yuz berdi", Toast.LENGTH_SHORT).show()
+        }
         adapter.setList(toplist)
         return binding.root
     }
