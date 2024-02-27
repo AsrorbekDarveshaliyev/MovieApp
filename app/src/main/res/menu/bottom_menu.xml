@@ -10,4 +10,12 @@
         android:id="@+id/detailFragment"
         android:icon="@drawable/clock_ic"
         android:title="detail" />
+    <item
+        android:id="@+id/savedFragment"
+        android:icon="@drawable/clock_ic"
+        android:title="saved" />
+    <item
+        android:id="@+id/ticketFragment"
+        android:icon="@drawable/clock_ic"
+        android:title="ticket" />
 </menu>
