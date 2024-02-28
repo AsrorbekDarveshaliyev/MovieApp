@@ -19,7 +19,7 @@ class DetailFragment : Fragment() {
     ): View {
         binding = FragmentDetailBinding.inflate(layoutInflater)
 
-        binding.name.text=name
+        binding.name.text = name
 
         return binding.root
     }
