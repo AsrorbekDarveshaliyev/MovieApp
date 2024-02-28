@@ -1,13 +1,11 @@
 package com.example.movieapp
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.movieapp.databinding.MovieBinding
-import com.example.movieapp.databinding.MovieVenomBinding
+import com.example.movieapp.databinding.ItemCardBinding
 
-class itemAdapter(private val listener: ((model:MymodelUI) -> Unit)):
+class itemAdapter(private val listener: ((model: MymodelUI) -> Unit)) :
     RecyclerView.Adapter<itemAdapter.MyViewHolder>() {
     private var list: ArrayList<MymodelUI> = ArrayList<MymodelUI>()
     fun setList(list: List<MymodelUI>) {
@@ -24,22 +22,22 @@ class itemAdapter(private val listener: ((model:MymodelUI) -> Unit)):
     }
 
 
-    inner class MyViewHolder(val binding: MovieBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class MyViewHolder(val binding: ItemCardBinding) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(model: MymodelUI) {
             binding.root.setOnClickListener {
 //                itemCardListener?.invoke(model.id)
                 listener.invoke(model)
 //                Toast.makeText(context, model.name, Toast.LENGTH_SHORT).show()
             }
-            binding.rasm.setImageResource(model.image)
-            binding.text.text = model.name
-            binding.rating.setImageResource(model.image)
+            binding.img.setImageResource(model.image)
+            binding.name.text = model.name
+            binding.title.text = model.rating
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(
-            MovieBinding.inflate(
+            ItemCardBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false

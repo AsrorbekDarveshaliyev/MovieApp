@@ -17,10 +17,6 @@ class DetailFragment : Fragment() {
         binding = FragmentDetailBinding.inflate(layoutInflater)
 
 
-
-
-
-
         return binding.root
     }
 

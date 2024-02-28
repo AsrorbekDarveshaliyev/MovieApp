@@ -1,10 +1,439 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragment.DetailFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/movie_venom" />
+
+            <include
+                android:id="@+id/top"
+                layout="@layout/movie_top" />
+
+            <View
+                android:id="@+id/toolbar_dim"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:alpha="0"
+                android:background="@color/transparent_black" />
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent_black">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsing_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <include
+                        layout="@layout/artist_page_parallax_placeholder"
+                        app:layout_collapseMode="parallax" />
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        app:layout_collapseMode="pin"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/back_button"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center_vertical|start"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/back_arrow" />
+
+                        <ImageView
+                            android:id="@+id/artist_report"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/more_icon" />
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:paddingBottom="32dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/scroll1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="18dp"
+                        android:layout_marginTop="6dp">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mulish_bold"
+                            android:text="Spiderman: No Way Home"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@drawable/small_star"
+                            app:layout_constraintStart_toStartOf="@id/name"
+                            app:layout_constraintTop_toBottomOf="@id/name" />
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="22dp"
+                            android:fontFamily="@font/mulish_regular"
+                            android:text="9.1/10 IDMb"
+                            android:textAllCaps="false"
+                            android:textColor="#9C9C9C"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="@id/name"
+                            app:layout_constraintTop_toBottomOf="@id/name" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/bookmark_mov"
+                            app:layout_constraintStart_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="#000000" />
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/scroll2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="18dp"
+                        android:layout_marginTop="6dp">
+
+                        <TextView
+                            android:id="@+id/button1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="30dp"
+                            android:background="@drawable/shape"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="5dp"
+                            android:text="HORROR"
+                            android:textColor="#88A4E8"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/mulish_bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/button2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/shape"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="5dp"
+                            android:text="MYSTERY"
+                            android:textColor="#88A4E8"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/mulish_bold"
+                            app:layout_constraintTop_toTopOf="@id/button1"
+                            app:layout_constraintStart_toEndOf="@id/button1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/shape"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="5dp"
+                            android:text="THRILLER"
+                            android:textColor="#88A4E8"
+                            android:textSize="8sp"
+                            android:fontFamily="@font/mulish_bold"
+                            app:layout_constraintTop_toTopOf="@id/button2"
+                            app:layout_constraintStart_toEndOf="@id/button2" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Length"
+                            android:textColor="#9C9C9C"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/mulish_regular"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="39dp"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="2h 28min"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/mulish_semibold"
+                            app:layout_constraintStart_toStartOf="@id/text3"
+                            app:layout_constraintTop_toBottomOf="@id/text3" />
+
+                        <TextView
+                            android:id="@+id/text4"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Language"
+                            android:textColor="#9C9C9C"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/mulish_regular"
+                            app:layout_constraintStart_toEndOf="@id/text3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="29dp"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="English"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/mulish_semibold"
+                            app:layout_constraintStart_toStartOf="@id/text4"
+                            app:layout_constraintTop_toBottomOf="@id/text4" />
+
+                        <TextView
+                            android:id="@+id/text5"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Rating"
+                            android:textColor="#9C9C9C"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/mulish_regular"
+                            app:layout_constraintStart_toEndOf="@id/text4"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="PG-13"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/mulish_semibold"
+                            app:layout_constraintStart_toEndOf="@id/text4"
+                            app:layout_constraintTop_toBottomOf="@id/text5" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/text8"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="Description"
+                            android:textColor="#110E47"
+                            android:textSize="18dp"
+                            android:fontFamily="@font/merriweather_black"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="350dp"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="10dp"
+                            android:text="With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man."
+                            android:textColor="#9C9C9C"
+                            android:textSize="12sp"
+                            android:lineHeight="22dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/mulish_regular"
+                            app:layout_constraintStart_toStartOf="@id/text8"
+                            app:layout_constraintTop_toBottomOf="@id/text8" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/now1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/merriweather_black"
+                            android:text="Cast"
+                            android:textColor="#110E47"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/scroll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:background="@drawable/see_more"
+                            android:fontFamily="@font/mulish_regular"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="4dp"
+                            android:text="See more"
+                            android:textColor="#AAA9B1"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@id/now1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/now1" />
+
+                        <ImageView
+                            android:id="@+id/tom"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/tom"
+                            app:layout_constraintStart_toStartOf="@id/now1"
+                            app:layout_constraintTop_toBottomOf="@id/now1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/mulish_regular"
+                            android:text="Tom Holland"
+                            android:textColor="#110E47"
+                            android:textSize="13sp"
+                            app:layout_constraintEnd_toEndOf="@id/tom"
+                            app:layout_constraintStart_toStartOf="@id/tom"
+                            app:layout_constraintTop_toBottomOf="@id/tom" />
+
+                        <ImageView
+                            android:id="@+id/zen"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/zen"
+                            app:layout_constraintStart_toEndOf="@id/tom"
+                            app:layout_constraintTop_toBottomOf="@id/now1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/mulish_regular"
+                            android:text="Zendaya"
+                            android:textColor="#110E47"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toStartOf="@id/zen"
+                            app:layout_constraintTop_toBottomOf="@id/zen" />
+
+                        <ImageView
+                            android:id="@+id/ben"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/ben"
+                            app:layout_constraintStart_toEndOf="@id/zen"
+                            app:layout_constraintTop_toBottomOf="@id/now1" />
+
+                        <TextView
+                            android:layout_width="83dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/mulish_regular"
+                            android:text="Benedict Cumberbatch"
+                            android:textColor="#110E47"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toStartOf="@id/ben"
+                            app:layout_constraintTop_toBottomOf="@id/ben" />
+
+                        <ImageView
+                            android:id="@+id/jac"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/jac"
+                            app:layout_constraintStart_toEndOf="@id/ben"
+                            app:layout_constraintTop_toBottomOf="@id/now1" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/mulish_regular"
+                            android:text="Jacon Batalon"
+                            android:textColor="#110E47"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toStartOf="@id/jac"
+                            app:layout_constraintTop_toBottomOf="@id/jac" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

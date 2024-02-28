@@ -36,20 +36,20 @@ class HomeFragment : Fragment() {
 
 
         val toplist = listOf<MymodelUI>(
-            MymodelUI(R.drawable.shangchi, "SHang-Chi", id = 1),
-            MymodelUI(R.drawable.shangchi, "Eternals", id = 2),
-            MymodelUI(R.drawable.shangchi, "Avengers", id = 3),
-            MymodelUI(R.drawable.shangchi, "The New Amazing Spider-Man", id = 4),
-            MymodelUI(R.drawable.shangchi, "Electro", id = 5),
-            MymodelUI(R.drawable.shangchi, "Sherlok Holmas", id = 6),
-            MymodelUI(R.drawable.shangchi, "Elona Holmas", id = 7),
+            MymodelUI(R.drawable.movie_venom, "SHang-Chi", id = 1, rating = "9.8/10 IMDb"),
+            MymodelUI(R.drawable.movie_venom, "Eternals", id = 2, rating = "5.2/10 IMDb"),
+            MymodelUI(R.drawable.movie_venom, "Avengers", id = 3, rating = "6.8/10 IMDb"),
+            MymodelUI(R.drawable.movie_venom, "The New Amazing Spider-Man", id = 4, rating = "7.8/10 IMDb"),
+            MymodelUI(R.drawable.movie_venom, "Electro", id = 5, rating = "7.8/10 IMDb"),
+            MymodelUI(R.drawable.movie_venom, "Sherlok Holmas", id = 6, rating = "7.8/10 IMDb"),
+            MymodelUI(R.drawable.movie_venom, "Elona Holmas", id = 7, rating = "7.8/10 IMDb"),
         )
 
-        toplist?.let {
-
-        }.run {
-            Toast.makeText(requireContext(), "hatolik yuz berdi", Toast.LENGTH_SHORT).show()
-        }
+//        toplist?.let {
+//
+//        }.run {
+//            Toast.makeText(requireContext(), "hatolik yuz berdi", Toast.LENGTH_SHORT).show()
+//        }
         adapter.setList(toplist)
         return binding.root
     }

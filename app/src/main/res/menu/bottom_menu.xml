@@ -7,7 +7,7 @@
         android:title="home" />
 
     <item
-        android:id="@+id/detailFragment"
+        android:id="@+id/detFragment"
         android:icon="@drawable/clock_ic"
         android:title="detail" />
 </menu>
