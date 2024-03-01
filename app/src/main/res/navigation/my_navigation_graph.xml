@@ -25,4 +25,13 @@
         android:name="com.example.movieapp.fragment.SavedFragment"
         android:label="fragment_saved"
         tools:layout="@layout/fragment_saved" />
+    <dialog
+        android:id="@+id/deleteDialog"
+        android:name="com.example.movieapp.dialog.DeleteDialog"
+        android:label="DeleteDialog"
+        tools:layout="@layout/dialog_delete_fragment" />
+    <fragment
+        android:id="@+id/bottomSheetDialogFragment"
+        android:name="com.example.movieapp.dialog.MyBottomSheetDialogFragment"
+        android:label="BottomSheetDialogFragment" />
 </navigation>

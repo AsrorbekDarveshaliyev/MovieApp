@@ -29,6 +29,8 @@ class HomeFragment : Fragment() {
             bundle.putString("rating", data.rating)
             bundle.putInt("img", data.image)
             findNavController().navigate(R.id.detailFragment, bundle)
+
+//            findNavController().navigate(R.id.bottomSheetDialogFragment)
         }
         //hello
         binding.horizontalRv.adapter = adapter
@@ -62,7 +64,6 @@ class HomeFragment : Fragment() {
         adapter.setList(toplist)
         return binding.root
     }
-
 
 }
 

@@ -6,4 +6,15 @@
     </style>
 
     <style name="Theme.MovieApp" parent="Base.Theme.MovieApp" />
+
+    <style name="Theme.Kooky.Component.AlertDialogFragment" parent="Theme.Kooky.Component.DialogFragment" />
+
+    <style name="Theme.Kooky.Component.DialogFragment" parent="Theme.AppCompat.Dialog">
+        <item name="android:statusBarColor">@color/transparent_black</item>
+        <item name="android:navigationBarColor">@color/transparent_black</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
 </resources>
